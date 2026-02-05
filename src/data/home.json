@@ -18,12 +18,12 @@
 		},
 		"info": [
 			{
-				"title": "What I’m doing",
-				"text": "I’m currently working as an adjunct professor at Universidad del Sagrado Corazón and offer podcast consulting, editing, and production services."
-			},
-			{
 				"title": "Open to collaborations",
 				"text": "I’m available to collaborate — on-site or remotely — on new projects."
+			},
+			{
+				"title": "What I’m doing",
+				"text": "I’m currently working as an adjunct professor at Universidad del Sagrado Corazón and offer podcast consulting, editing, and production services."
 			},
 			{
 				"title": "Location",
@@ -139,12 +139,12 @@
 		},
 		"info": [
 			{
-				"title": "A qué me dedico",
-				"text": "Actualmente, trabajo como profesora universitaria en la Universidad del Sagrado Corazón y ofrezco servicios de consultoría, edición y producción de podcast."
-			},
-			{
 				"title": "Disponibilidad",
 				"text": "Estoy disponible para colaborar —de forma presencial o remota— en nuevos proyectos."
+			},
+			{
+				"title": "A qué me dedico",
+				"text": "Actualmente, trabajo como profesora universitaria en la Universidad del Sagrado Corazón y ofrezco servicios de consultoría, edición y producción de podcast."
 			},
 			{
 				"title": "Ubicación",
