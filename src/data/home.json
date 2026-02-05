@@ -9,11 +9,11 @@
 			"lead": "Journalist, podcast producer, and educator. Specialized in gender-focused reporting, human rights, and trauma-informed journalism.",
 			"ctaPrimary": {
 				"label": "More about me",
-				"href": "/work"
+				"href": "/en/work"
 			},
 			"ctaSecondary": {
 				"label": "Let's work together",
-				"href": "#contact"
+				"href": "/en/#contact"
 			}
 		},
 		"info": [
