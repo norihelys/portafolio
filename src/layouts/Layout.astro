@@ -1,0 +1,126 @@
+---
+import "../global.css";
+
+interface Props {
+	title?: string;
+	description?: string;
+	lang?: "es" | "en";
+	image?: string;
+}
+
+const {
+	title = "Norihelys — Portafolio",
+	description = "Periodismo, academia y sonido.",
+	lang = "es",
+	image = "/climate-heroes.png",
+} = Astro.props as Props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+// Corrección para GitHub Pages: asegurar que la imagen incluya el 'base' (/nori)
+const imagePath = image.startsWith("/") ? `${base}${image}` : image;
+const ogImageURL = new URL(imagePath, Astro.site);
+
+let relativePath = Astro.url.pathname;
+
+if (relativePath.startsWith("/nori")) {
+	relativePath = relativePath.replace("/nori", "");
+}
+
+if (relativePath.startsWith("/en")) {
+	relativePath = relativePath.replace("/en", "");
+}
+
+if (relativePath === "") relativePath = "/";
+
+const esURL = new URL(
+	`/nori${relativePath === "/" ? "" : relativePath}`,
+	Astro.site,
+);
+const enURL = new URL(
+	`/nori/en${relativePath === "/" ? "" : relativePath}`,
+	Astro.site,
+);
+---
+
+<!doctype html>
+<html lang={lang}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={canonicalURL} />
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalURL} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImageURL} />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={canonicalURL} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={ogImageURL} />
+
+        <!-- Alternates -->
+        <link rel="alternate" hreflang="es" href={esURL} />
+        <link rel="alternate" hreflang="en" href={enURL} />
+        <link rel="alternate" hreflang="x-default" href={esURL} />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap"
+            rel="stylesheet"
+        />
+         <link rel="sitemap" href="/sitemap-index.xml" />
+         <!-- Fathom Analytics -->
+    </head>
+    <body>
+        <div class="page">
+            <header class="site-header">
+                <div class="container">
+                    <slot name="header" />
+                </div>
+            </header>
+            <main class="site-main">
+                <slot />
+            </main>
+            <footer class="site-footer">
+                <div class="container">
+                    <slot name="footer" />
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
+
+<style>
+    .page {
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+    .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: saturate(140%) blur(10px);
+        background: color-mix(in oklab, white 75%, transparent);
+        border-bottom: 1px solid
+            color-mix(in oklab, var(--sage) 35%, transparent);
+    }
+    .site-footer {
+        padding: 20px;
+        color: var(--stone);
+        font-size: 0.9rem;
+        text-align: center;
+    }
+</style>

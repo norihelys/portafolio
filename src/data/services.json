@@ -1,0 +1,62 @@
+{
+	"en": {
+		"title": "Services",
+		"sections": [
+			{
+				"title": "Podcast Production",
+				"items": [
+					"Solo-host, conversational, or narrative formats",
+					"Concept development",
+					"Production and editing",
+					"Distribution"
+				]
+			},
+			{
+				"title": "Leading Workshops",
+				"items": [
+					"Gender coverage, human rights, and trauma-informed practices",
+					"Active listening and judgment-free conversations",
+					"Activities and exercises to put learning into practice"
+				]
+			},
+			{
+				"title": "Writing and Editing",
+				"items": [
+					"Stories and reporting in written or audio form",
+					"Trauma-informed and inclusive storytelling practices"
+				]
+			}
+		],
+		"cta": "Book a free consultation and tell me how I can help!"
+	},
+	"es": {
+		"title": "Servicios",
+		"sections": [
+			{
+				"title": "Creación de pódcast",
+				"items": [
+					"Formato monólogo, conversacional o narrativo",
+					"Conceptualización de la idea",
+					"Producción y edición",
+					"Distribución"
+				]
+			},
+			{
+				"title": "Facilitación de talleres",
+				"items": [
+					"Teoría en cobertura de género, derechos humanos y trauma",
+					"Escucha activa y conversación libre de juicios",
+					"Dinámicas y ejercicios para aplicar lo aprendido"
+				]
+			},
+			{
+				"title": "Redacción y edición",
+				"items": [
+					"Piezas periodísticas en formato escrito o sonoro",
+					"Uso de lenguaje inclusivo no sexista y narrativa informada en trauma"
+				]
+			}
+		],
+		"cta": "¡Agenda una consultoría gratuita y cuéntame cómo puedo ayudarte!"
+	}
+}

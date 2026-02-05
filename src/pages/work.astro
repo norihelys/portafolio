@@ -1,0 +1,138 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import projects from "../data/projects.json";
+import { makeHref } from "../utils/url";
+const t = projects.es;
+---
+
+<Layout
+    title="Proyectos — Norihelys"
+    description="Selección de trabajo"
+    lang="es"
+>
+    <Fragment slot="header"><Nav /></Fragment>
+    <section class="projects-section section container--medium">
+        <h1>{t.title}</h1>
+        <div class="projects-list">
+            <h2 class="section-subtitle featured-heading">{t.featuredTitle}</h2>
+            {t.featured.map((item: any) => (
+                <div class="project-row card card--row">
+                    <div class="project-img">
+                        <img src={makeHref(item.image)} alt={item.title} />
+                    </div>
+                    <div class="project-info">
+                        <h3>
+                            {item.url ? (
+                                <a href={makeHref(item.url)} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                            ) : (
+                                item.title
+                            )}
+                        </h3>
+                        <p>{item.description}</p>
+                    </div>
+                </div>
+            ))}
+            <h2 class="section-subtitle">{t.recentTitle}</h2>
+            {t.recent.map((item: any) => (
+                <div class="project-row card card--row">
+                    <div class="project-img">
+                        <img src={makeHref(item.image)} alt={item.title} />
+                    </div>
+                    <div class="project-info">
+                        <h3>
+                            <a href={makeHref(item.url)} target="_blank" rel="noopener noreferrer">{item.title}</a>
+                        </h3>
+                        <p>{item.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </section>
+    <Fragment slot="footer">Más en breve. © {new Date().getFullYear()}</Fragment>
+</Layout>
+
+<style>
+    .projects-section {
+        max-width: 820px;
+        margin: 0 auto;
+        padding: 32px 24px 24px 24px;
+    }
+    .section-subtitle {
+        font-size: 1.15rem;
+        font-family: var(--display-font);
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        margin: 0 0 12px;
+    }
+    .featured-heading { margin-top: 4px; }
+    .projects-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .project-row {
+        display: flex;
+        align-items: stretch;
+        gap: 0;
+        padding: 0;
+        min-height: 180px;
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+    .project-img {
+        width: 200px;
+        min-width: 200px;
+        background: var(--mint);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #eee;
+        padding: 0;
+    }
+    .project-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+    .project-info {
+        flex: 1;
+        padding: 20px 20px 12px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .tags {
+        margin-top: 10px;
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+    .tag {
+        background: var(--accent);
+        color: var(--ink);
+        border-radius: 999px;
+        padding: 4px 12px;
+        font-size: 0.95em;
+        font-weight: 500;
+        border: 1px solid var(--sage);
+    }
+    @media (max-width: 700px) {
+        .project-row {
+            flex-direction: column;
+            min-height: unset;
+        }
+        .project-img {
+            width: 100%;
+            min-width: unset;
+            border-right: none;
+            border-bottom: 1px solid #eee;
+        }
+        .project-info {
+            padding: 18px 16px;
+        }
+    }
+</style>
+

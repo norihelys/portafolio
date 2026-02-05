@@ -1,0 +1,40 @@
+{
+	"en": {
+		"title": "Now",
+		"entries": [
+			{
+				"date": "Since August 2025",
+				"paragraphs": [
+					"Since August 2025, I’ve embraced a new chapter, working full-time as a freelancer on projects related to academia, podcasting, and journalists’ mental health.",
+					"I currently teach undergraduate courses at the Ferré Rangel School of Communication and the General Studies Unit at Universidad del Sagrado Corazón. I also offer podcast consulting, editing, and production services.",
+					"As I settle into the new academic semester, I continue to enjoy my healthy habits and favorite activities, like walking, reading, and dancing salsa, always reminding myself that my well-being is my top priority.",
+					"I’m still learning, one day at a time."
+				]
+			}
+		],
+		"about": {
+			"label": "What is this?",
+			"text": "The Now movement invites people to share what they're doing right now.",
+			"url": "https://nownownow.com/about"
+		}
+	},
+	"es": {
+		"title": "Now",
+		"entries": [
+			{
+				"date": "Desde agosto de 2025",
+				"paragraphs": [
+					"Desde agosto de 2025, estoy viviendo una nueva etapa. Trabajo como profesional independiente a tiempo completo en proyectos relacionados a la academia, al podcast, y a la salud mental de periodistas.",
+					"Actualmente, imparto cursos subgraduados en la Escuela de Comunicación Ferré Rangel y en la Unidad de Estudios Generales de la Universidad del Sagrado Corazón. Además, ofrezco servicios de consultoría, edición y producción de podcast.",
+					"Mientras me adapto al nuevo semestre académico, también disfruto de mis hábitos saludables y pasatiempos favoritos, como caminar, leer y bailar salsa. Me repito que mi cuidado y bienestar son mi mayor prioridad.",
+					"Sigo aprendiendo un día a la vez."
+				]
+			}
+		],
+		"about": {
+			"label": "¿Qué es esto?",
+			"text": "El movimiento Now invita a las personas a compartir qué hacen ahora mismo.",
+			"url": "https://nownownow.com/about"
+		}
+	}
+}

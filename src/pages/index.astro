@@ -1,0 +1,343 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import home from "../data/home.json";
+import { makeHref } from "../utils/url";
+const t = home.es;
+---
+
+<Layout title={t.meta.title} description={t.meta.description} lang="es">
+    <Fragment slot="header"><Nav /></Fragment>
+
+    <section id="intro" class="section container--medium text-center">
+        <h1 class="intro-title display-1">{t.hero.title}</h1>
+        <div class="intro-text">
+            <p class="lead">{t.hero.lead}</p>
+        </div>
+        <div class="intro-cta" style="justify-content:center;">
+            <a class="btn btn-cta btn--lg" href={makeHref(t.hero.ctaPrimary.href)}>{t.hero.ctaPrimary.label}</a>
+            <a class="btn btn-ghost btn--lg" href={makeHref(t.hero.ctaSecondary.href)}>{t.hero.ctaSecondary.label}</a>
+        </div>
+    </section>
+
+    <section class="section container--narrow text-center">
+        <div class="grid grid--wide grid-center center">
+            {t.info.map((card: any) => (
+                <article class="card card--mini">
+                    <h3>{card.title}</h3>
+                    <p>{card.text}</p>
+                </article>
+            ))}
+        </div>
+    </section>
+
+    <section class="band--mint">
+        <div class="container container--wide projects-alt">
+            <h2 class="display-2 text-center" style="margin-bottom: var(--space-5)">{t.featured.title}</h2>
+            <div class="projects-grid">
+                {t.featured.items.map((it: any) => (
+                    <div class="project-card card card--elevated">
+                        <h3>{it.title}</h3>
+                        <p>{it.text}</p>
+                        <a href={makeHref(it.link.href)} class="project-link">{it.link.label}</a>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </section>
+
+    <section class="section container--narrow testimonials-section">
+        <h2 class="display-2 text-center" style="margin-bottom: var(--space-4)">{t.testimonials.title}</h2>
+        <div class="testimonial-slider card card--mini" data-testimonial-slider>
+                <button
+                    type="button"
+                    class="testimonial-nav testimonial-nav--prev"
+                    aria-label="Testimonio anterior"
+                    data-prev
+                >
+                    <span class="triangle triangle-left"></span>
+                </button>
+            <div class="testimonial-track">
+                {t.testimonials.items.map((ti: any, i: number) => (
+                    <article class="testimonial" data-testimonial hidden={i !== 0}>
+                        <p class="testimonial-quote">"{ti.quote}"</p>
+                        <p class="testimonial-meta">{ti.meta}</p>
+                    </article>
+                ))}
+            </div>
+                <button
+                    type="button"
+                    class="testimonial-nav testimonial-nav--next"
+                    aria-label="Siguiente testimonio"
+                    data-next
+                >
+                    <span class="triangle triangle-right"></span>
+                </button>
+        </div>
+    </section>
+
+    <section id={t.contact.id} class="section container--narrow">
+        <div class="contact-card">
+            <h2 class="display-2" style="margin-bottom: var(--space-4)">{t.contact.title}</h2>
+            <p class="lead">{t.contact.lead}</p>
+            <form
+                id="contact-form"
+                class="contact-form"
+                name={t.contact.form.name}
+                method="POST"
+            >
+                <input type="hidden" name="form-name" value={t.contact.form.name} />
+                <!-- Honeypot anti-spam field (hidden to users) -->
+                <input type="text" name="botcheck" id="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+
+                <div class="grid-2">
+                    <div class="field">
+                        <label for="name">{t.contact.form.fields.name.label}</label>
+                        <input
+                            id="name"
+                            name="name"
+                            class="input"
+                            placeholder={t.contact.form.fields.name.placeholder}
+                            required
+                        />
+                    </div>
+                    <div class="field">
+                        <label for="email">{t.contact.form.fields.email.label}</label>
+                        <input
+                            id="email"
+                            type="email"
+                            name="email"
+                            class="input"
+                            placeholder={t.contact.form.fields.email.placeholder}
+                            required
+                        />
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="subject">{t.contact.form.fields.subject.label}</label>
+                    <input
+                        id="subject"
+                        name="subject"
+                        class="input"
+                        placeholder={t.contact.form.fields.subject.placeholder}
+                    />
+                </div>
+                <div class="field">
+                    <label for="type">{t.contact.form.fields.type.label}</label>
+                    <select id="type" name="type" class="input">
+                        {t.contact.form.fields.type.options.map((opt: any) => (
+                            <option value={opt.value}>{opt.label}</option>
+                        ))}
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="message">{t.contact.form.fields.message.label}</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        class="textarea"
+                        placeholder={t.contact.form.fields.message.placeholder}
+                        required></textarea>
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn btn-cta btn--lg">{t.contact.form.fields.submit.label}</button>
+                    <span class="hint">{t.contact.form.fields.hint}</span>
+                </div>
+            </form>
+
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script>
+                import { initContactForm } from "../utils/contact";
+                
+                initContactForm({
+                    publicKey: 'z2ljYa2zn5-z0KDnm',
+                    serviceId: 'service_tazw81q',
+                    templateId: 'template_6m8c8w7',
+                    successUrl: '/nori/thank-you'
+                });
+            </script>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .intro-title {
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+    .intro-text p {
+        font-size: 1.28em;
+        line-height: 1.5;
+        color: var(--ink);
+        margin: 0 auto;
+        max-width: 700px;
+    }
+    .intro-cta {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+        justify-content: center;
+        gap: 16px;
+        margin: 24px 0;
+    }
+
+    .grid > .card {
+        max-width: 320px;
+    }
+    .mini {
+        padding: 18px;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 380px));
+        gap: 28px;
+        justify-content: center;
+    }
+    .testimonials-section {
+        margin-top: var(--space-7);
+        margin-bottom: var(--space-6);
+    }
+    .testimonial-slider {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 12px;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+    .testimonial-track {
+        overflow: hidden;
+    }
+    .project-card {
+        padding: 18px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 1px solid color-mix(in oklab, var(--sage) 55%, white);
+        transition: box-shadow 0.2s ease;
+        background: var(--card);
+    }
+    .project-card:hover {
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+    }
+    .project-link {
+        margin-top: 12px;
+        color: var(--primary);
+        font-weight: 600;
+        text-decoration: none;
+        align-self: center;
+        text-align: center;
+        font-size: 1em;
+        background: var(--mint, #e0f7e9);
+        border-radius: 999px;
+        padding: 8px 22px;
+        border: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        transition: background 0.2s;
+        display: inline-block;
+    }
+
+    .project-link:hover {
+        background: var(--primary, #2ecc8f);
+        color: #fff;
+    }
+    .testimonial {
+        text-align: left;
+    }
+    .testimonial-quote {
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 8px;
+    }
+    .testimonial-meta {
+        font-size: 0.95rem;
+        color: var(--stone);
+    }
+    .testimonial-nav {
+        background: transparent;
+        border-radius: 999px;
+        border: 1px solid color-mix(in oklab, var(--sage) 60%, white);
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: var(--ink);
+        font-size: 1rem;
+    }
+    .testimonial-nav:hover {
+        background: color-mix(in oklab, var(--mint) 70%, white);
+    }
+    .triangle { width:0; height:0; border-top:6px solid transparent; border-bottom:6px solid transparent; }
+    .triangle-left { border-right:8px solid var(--ink); }
+    .triangle-right { border-left:8px solid var(--ink); }
+
+    .contact-section {
+        margin: 56px 0;
+        display: flex;
+        justify-content: center;
+    }
+    .contact-card {
+        max-width: 720px;
+        padding: 0 28px;
+        text-align: center;
+        background: none;
+        border: 0;
+        box-shadow: none;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width: 900px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+        .projects-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    .section--tight {
+        margin-block: var(--space-5);
+    }
+    
+</style>
+
+<script>
+    const slider = document.querySelector('[data-testimonial-slider]');
+    if (slider) {
+        const items = Array.from(
+            slider.querySelectorAll('[data-testimonial]')
+        );
+        let index = 0;
+        const show = (i: number) => {
+            items.forEach((el, idx) => {
+                const node = el as HTMLElement;
+                if (idx === i) {
+                    node.hidden = false;
+                } else {
+                    node.hidden = true;
+                }
+            });
+        };
+        const prevBtn = slider.querySelector('[data-prev]');
+        const nextBtn = slider.querySelector('[data-next]');
+        prevBtn?.addEventListener('click', () => {
+            index = (index - 1 + items.length) % items.length;
+            show(index);
+        });
+        nextBtn?.addEventListener('click', () => {
+            index = (index + 1) % items.length;
+            show(index);
+        });
+        show(index);
+    }
+</script>

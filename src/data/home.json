@@ -1,0 +1,244 @@
+{
+	"en": {
+		"meta": {
+			"title": "Norihelys — Portfolio",
+			"description": "Display type, centered intro, and full‑bleed projects."
+		},
+		"hero": {
+			"title": "Hi, I’m Norihelys Ramos Rodríguez!",
+			"lead": "Journalist, podcast producer, and educator. Specialized in gender-focused reporting, human rights, and trauma-informed journalism.",
+			"ctaPrimary": {
+				"label": "More about me",
+				"href": "/work"
+			},
+			"ctaSecondary": {
+				"label": "Let's work together",
+				"href": "#contact"
+			}
+		},
+		"info": [
+			{
+				"title": "What I’m doing",
+				"text": "I’m currently working as an adjunct professor at Universidad del Sagrado Corazón and offer podcast consulting, editing, and production services."
+			},
+			{
+				"title": "Open to collaborations",
+				"text": "I’m available to collaborate — on-site or remotely — on new projects."
+			},
+			{
+				"title": "Location",
+				"text": "Based in San Juan, Puerto Rico (AST / UTC-4 time zone)."
+			}
+		],
+		"featured": {
+			"title": "Featured Projects",
+			"items": [
+				{
+					"title": "Master's thesis: \"Natural disaster coverage and mental health effects on Puerto Rican journalists\"",
+					"text": "Natural disasters are traumatic events that not only affect the emotional and psychological well-being of primary victims, but also the journalists covering them. This report — a pioneering study in Puerto Rico — describes the experiences of a group of journalists who developed symptoms of burnout, anxiety, and post-traumatic stress caused by their coverage of hurricanes and earthquakes, which persisted during and after the reporting period.",
+					"link": {
+						"label": "View thesis",
+						"href": "https://hdl.handle.net/1992/69241"
+					}
+				},
+				{
+					"title": "Talk: \"The Risk of Being a Journalist in a Natural Disaster\"",
+					"text": "Based on the findings of my master's thesis, this talk is designed to raise awareness about mental health in journalism, open conversations around covering traumatic events, and share strategies for prevention and self-care. It's free and open to academic communities and media professionals.",
+					"link": {
+						"label": "Interested?",
+						"href": "/en#contact"
+					}
+				}
+			]
+		},
+		"testimonials": {
+			"title": "Testimonials",
+			"items": [
+				{
+					"quote": "Your thesis is very necessary and could help journalism organizations begin to prioritize these issues, especially here in this archipelago, where we live from one crisis to another. I also believe it can serve as a foundation to promote a therapeutic services program for journalists. Thank you for this contribution.",
+					"meta": "— Puerto Rican journalist, Global Press Journal"
+				},
+				{
+					"quote": "I've had an excellent experience working with Norihelys on podcast editing. She is responsible, meets agreed deadlines, and delivers clean, high-quality sound editing. Whenever I had questions, she responded effectively, and after receiving the raw audio I sent her, she provided valuable feedback. I would undoubtedly recommend her for other projects.",
+					"meta": "— Producer and host, Construyendo Poder, Proyecto Matria"
+				},
+				{
+					"quote": "This class has been absolutely amazing. I never expected to enjoy it this much, but honestly, that was only possible because of the professor. Her passion, motivation, creativity, and dedication made all the difference. She will be one of the few professors I carry with me forever, because she showed me what true knowledge is and my worth as a student. In the future, if I ever feel lost, I know I'll have a mentor who will always be there for me.",
+					"meta": "— Student, Ferré Rangel School of Communication, Universidad del Sagrado Corazón"
+				},
+				{
+					"quote": "Working with Norihelys as a workshop facilitator on responsible coverage of gender-based violence has been a true pleasure. Her organization, commitment, and expertise stand out, and participants consistently praise the clarity, relevance, and value of her workshops.",
+					"meta": "— Director, Coordinadora Paz para las Mujeres"
+				}
+			]
+		},
+		"contact": {
+			"id": "contact",
+			"title": "Shall we chat?",
+			"lead": "Tell me about your project and let’s see how we can collaborate.",
+			"form": {
+				"name": "contact",
+				"fields": {
+					"name": {
+						"label": "Name",
+						"placeholder": "Your name"
+					},
+					"email": {
+						"label": "Email",
+						"placeholder": "you@example.com"
+					},
+					"subject": {
+						"label": "Subject",
+						"placeholder": "Message subject"
+					},
+					"type": {
+						"label": "What are you reaching out about?",
+						"options": [
+							{
+								"value": "podcast",
+								"label": "Podcast consulting"
+							},
+							{
+								"value": "education",
+								"label": "Educational or workshop services"
+							},
+							{
+								"value": "other",
+								"label": "Other"
+							}
+						]
+					},
+					"message": {
+						"label": "Message",
+						"placeholder": "Tell me about your project"
+					},
+					"submit": {
+						"label": "Send"
+					},
+					"hint": "or email me at norihelys.ramos@gmail.com"
+				}
+			}
+		}
+	},
+	"es": {
+		"meta": {
+			"title": "Norihelys — Portafolio",
+			"description": "Tipografía destacada, introducción centrada y proyectos a todo ancho."
+		},
+		"hero": {
+			"title": "¡Hola, soy Norihelys Ramos Rodríguez!",
+			"lead": "Periodista, productora de podcast y educadora. Especializada en la cobertura con enfoque de género, derechos humanos y en el periodismo informado en trauma.",
+			"ctaPrimary": {
+				"label": "Más sobre mí",
+				"href": "/work"
+			},
+			"ctaSecondary": {
+				"label": "Trabajemos juntos",
+				"href": "#contacto"
+			}
+		},
+		"info": [
+			{
+				"title": "A qué me dedico",
+				"text": "Actualmente, trabajo como profesora universitaria en la Universidad del Sagrado Corazón y ofrezco servicios de consultoría, edición y producción de podcast."
+			},
+			{
+				"title": "Disponibilidad",
+				"text": "Estoy disponible para colaborar —de forma presencial o remota— en nuevos proyectos."
+			},
+			{
+				"title": "Ubicación",
+				"text": "Con base en San Juan, Puerto Rico (AST / UTC-4)."
+			}
+		],
+		"featured": {
+			"title": "Proyectos destacados",
+			"items": [
+				{
+					"title": "Tesis de maestría: \"Cobertura de desastres naturales y efectos en la salud mental de periodistas puertorriqueños\"",
+					"text": "Los desastres naturales son eventos traumáticos que no solo afectan el bienestar emocional y psicológico de las víctimas primarias, sino también de los periodistas que los cubren. Este informe — un estudio pionero en Puerto Rico — describe las experiencias de un grupo de periodistas que desarrollaron síntomas de agotamiento, ansiedad y estrés postraumático a raíz de su cobertura de huracanes y terremotos, los cuales persistieron durante y después del período de reporte.",
+					"link": {
+						"label": "Ver tesis",
+						"href": "https://hdl.handle.net/1992/69241"
+					}
+				},
+				{
+					"title": "Charla: \"El riesgo de ser periodista en un desastre natural\"",
+					"text": "Basada en los hallazgos de mi tesis de maestría, esta charla busca visibilizar la salud mental en el periodismo, abrir conversaciones sobre la cobertura de eventos traumáticos y compartir estrategias de prevención y autocuidado. Es gratuita y está abierta a comunidades académicas y profesionales de medios.",
+					"link": {
+						"label": "Me interesa",
+						"href": "#contacto"
+					}
+				}
+			]
+		},
+		"testimonials": {
+			"title": "Testimonios",
+			"items": [
+				{
+					"quote": "Tu tesis es muy necesaria y podría ayudar a que organizaciones periodísticas comiencen a priorizar estos temas, sobre todo aquí en el archipiélago, donde vivimos de una crisis a otra. También puede servir como base para promover un programa de servicios terapéuticos para periodistas. Gracias por esta contribución.",
+					"meta": "— Periodista puertorriqueña, Global Press Journal"
+				},
+				{
+					"quote": "Mi experiencia trabajando con Norihelys en la edición de pódcast ha sido excelente. Es responsable, cumple los plazos acordados y entrega una edición limpia y de alta calidad. Siempre que tuve preguntas respondió con eficacia y, tras recibir el audio crudo, me ofreció retroalimentación valiosa. Sin duda la recomendaría para otros proyectos.",
+					"meta": "— Productora y conductora, Construyendo Poder, Proyecto Matria"
+				},
+				{
+					"quote": "Esta clase ha sido verdaderamente increíble. Nunca pensé que la disfrutaría tanto, pero eso solo fue posible gracias a la profesora. Su pasión, motivación, creatividad y entrega marcaron la diferencia. Será una de las pocas docentes que llevaré conmigo siempre, porque me mostró lo que es el conocimiento verdadero y mi valor como estudiante. En el futuro, si alguna vez me siento perdida, sé que tendré una mentora que siempre estará ahí para mí.",
+					"meta": "— Estudiante, Escuela de Comunicación Ferré Rangel, Universidad del Sagrado Corazón"
+				},
+				{
+					"quote": "Colaborar con Norihelys, como tallerista sobre cobertura responsable en casos de violencia de género, ha sido un verdadero placer trabajar. Su nivel de organización, compromiso y dominio del tema es excepcional. Además, las personas participantes siempre destacan su claridad al explicar, la pertinencia de la información y lo valiosos que resultan sus talleres.",
+					"meta": "— Directora, Coordinadora Paz para las Mujeres"
+				}
+			]
+		},
+		"contact": {
+			"id": "contacto",
+			"title": "¿Hablamos?",
+			"lead": "Cuéntame sobre tu proyecto y veamos cómo podemos colaborar.",
+			"form": {
+				"name": "contacto",
+				"fields": {
+					"name": {
+						"label": "Nombre",
+						"placeholder": "Tu nombre"
+					},
+					"email": {
+						"label": "Correo electrónico",
+						"placeholder": "tu@email.com"
+					},
+					"subject": {
+						"label": "Asunto",
+						"placeholder": "Asunto del mensaje"
+					},
+					"type": {
+						"label": "¿Sobre qué escribes?",
+						"options": [
+							{
+								"value": "consultoria_podcast",
+								"label": "Consultoría en podcast"
+							},
+							{
+								"value": "educadora_tallerista",
+								"label": "Servicios como educadora o tallerista"
+							},
+							{
+								"value": "otro",
+								"label": "Otro"
+							}
+						]
+					},
+					"message": {
+						"label": "Mensaje",
+						"placeholder": "Cuéntame sobre tu proyecto"
+					},
+					"submit": {
+						"label": "Enviar"
+					},
+					"hint": "o escríbeme a norihelys.ramos@gmail.com"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orihelys.github.io/portafolio/sitemap-index.xml

@@ -1,0 +1,104 @@
+{
+	"en": {
+		"title": "Work",
+		"featuredTitle": "Featured",
+		"recentTitle": "Recent Projects",
+		"featured": [
+			{
+				"title": "Master's thesis: \"Natural disaster coverage and mental health effects on Puerto Rican journalists\"",
+				"description": "Natural disasters are traumatic events that not only affect the emotional and psychological well-being of primary victims, but also the journalists covering them. This report — a pioneering study in Puerto Rico — describes the experiences of a group of journalists who developed symptoms of burnout, anxiety, and post-traumatic stress caused by their coverage of hurricanes and earthquakes, which persisted during and after the reporting period.",
+				"url": "https://hdl.handle.net/1992/69241",
+				"image": "/thesis-cover.png"
+			},
+			{
+				"title": "Talk: \"The Risk of Being a Journalist in a Natural Disaster\"",
+				"description": "Based on the findings of my master's thesis, this talk is designed to raise awareness about mental health in journalism, open conversations around covering traumatic events, and share strategies for prevention and self-care. It's free and open to academic communities and media professionals.",
+				"url": "/en#contact",
+				"image": "/talk-cover.jpg"
+			}
+		],
+		"recent": [
+			{
+				"title": "Podcast (From episode 28)",
+				"url": "https://open.spotify.com/show/6ZOqvi4eQF172cTG4GNwiC?si=6b0323d28baa4c72",
+				"description": "Audio editing, mixing, and mastering from episode 28 onward.",
+				"image": "/la-verdura-de-hoy.jpeg"
+			},
+			{
+				"title": "Podcast (Seasons 1–2)",
+				"url": "https://open.spotify.com/show/7MLvbd9dzFPbRagSacihlj?si=72fd4cdaaeda49a8",
+				"description": "Audio editing, mixing and mastering for seasons 1 and 2.",
+				"image": "/crimen-101.jpeg"
+			},
+			{
+				"title": "Podcast (Seasons 1–3)",
+				"url": "https://open.spotify.com/show/0n7t401bbPoZVHnNwrnEhd?si=3ca7a282bea6451f",
+				"description": "Audio editing, mixing, and mastering for seasons 1, 2 and 3.",
+				"image": "/construyendo-poder.jpeg"
+			},
+			{
+				"title": "Radiolab: Library Alexandra",
+				"url": "https://www.radiolab.org/podcast/library-alexandra",
+				"description": "Recorded ambient sound, interviews, and first-person narration in both Spanish and English.",
+				"image": "/radio-lab.png"
+			},
+			{
+				"title": "Duolingo Podcast: Climate Heroes",
+				"url": "https://podcast.duolingo.com/episode-116-climate-heroes-harnessing-solar-energy-in-puerto-rico",
+				"description": "Developed story ideas, conducted interviews, and wrote scripts in Spanish.",
+				"image": "/climate-heroes.png"
+			}
+		]
+	},
+	"es": {
+		"title": "Proyectos",
+		"featuredTitle": "Destacados",
+		"recentTitle": "Proyectos recientes",
+		"featured": [
+			{
+				"title": "Tesis de maestría: \"Cobertura de desastres naturales y efectos en la salud mental de periodistas puertorriqueños\"",
+				"description": "Los desastres naturales son eventos traumáticos que no solo afectan el bienestar emocional y psicológico de las víctimas primarias, sino también de los periodistas que los cubren. Este informe — un estudio pionero en Puerto Rico — describe las experiencias de un grupo de periodistas que desarrollaron síntomas de agotamiento, ansiedad y estrés postraumático a raíz de su cobertura de huracanes y terremotos, los cuales persistieron durante y después del período de reporte.",
+				"url": "https://hdl.handle.net/1992/69241",
+				"image": "/thesis-cover.png"
+			},
+			{
+				"title": "Charla: \"El riesgo de ser periodista en un desastre natural\"",
+				"description": "Basada en los hallazgos de mi tesis de maestría, esta charla busca visibilizar la salud mental en el periodismo, abrir conversaciones sobre la cobertura de eventos traumáticos y compartir estrategias de prevención y autocuidado. Es gratuita y está abierta a comunidades académicas y profesionales de medios.",
+				"url": "#contacto",
+				"image": "/talk-cover.jpg"
+			}
+		],
+		"recent": [
+			{
+				"title": "Pódcast (Desde el episodio 28-44)",
+				"url": "https://open.spotify.com/show/6ZOqvi4eQF172cTG4GNwiC?si=6b0323d28baa4c72",
+				"description": "Edición de audio, mezcla y masterización desde el episodio 28 al 44.",
+				"image": "/la-verdura-de-hoy.jpeg"
+			},
+			{
+				"title": "Pódcast (Temporadas 1–2)",
+				"url": "https://open.spotify.com/show/7MLvbd9dzFPbRagSacihlj?si=72fd4cdaaeda49a8",
+				"description": "Edición de audio, mezcla y masterización de la primera y segunda temporada.",
+				"image": "/crimen-101.jpeg"
+			},
+			{
+				"title": "Pódcast (Temporadas 1–3)",
+				"url": "https://open.spotify.com/show/0n7t401bbPoZVHnNwrnEhd?si=3ca7a282bea6451f",
+				"description": "Edición de audio, mezcla y masterización de la primera, segunda y tercera temporada.",
+				"image": "/construyendo-poder.jpeg"
+			},
+			{
+				"title": "Radiolab: Library Alexandra",
+				"url": "https://www.radiolab.org/podcast/library-alexandra",
+				"description": "Captura de sonido ambiental, grabación de entrevistas y narración en primera persona, en español e inglés.",
+				"image": "/radio-lab.png"
+			},
+			{
+				"title": "Duolingo Podcast: Héroes del clima",
+				"url": "https://podcast.duolingo.com/episode-116-climate-heroes-harnessing-solar-energy-in-puerto-rico",
+				"description": "Propuesta de historia, entrevistas y redacción de guión en español.",
+				"image": "/climate-heroes.png"
+			}
+		]
+	}
+}

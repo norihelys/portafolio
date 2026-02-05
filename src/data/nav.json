@@ -1,0 +1,22 @@
+{
+	"en": {
+		"brand": "Norihelys",
+		"home": "Home",
+		"now": "Now",
+		"services": "Services",
+		"projects": "Projects",
+		"talk": "Let’s talk",
+		"linkedin": "LinkedIn",
+		"lang": "ES"
+	},
+	"es": {
+		"brand": "Norihelys",
+		"home": "Inicio",
+		"now": "Now",
+		"services": "Servicios",
+		"projects": "Proyectos",
+		"talk": "Hablemos",
+		"linkedin": "LinkedIn",
+		"lang": "EN"
+	}
+}

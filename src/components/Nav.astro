@@ -1,0 +1,132 @@
+---
+import nav from "../data/nav.json";
+import { makeHref, stripBase } from "../utils/url";
+const { url } = Astro;
+const pathname = url.pathname;
+
+const rawPath = stripBase(pathname || "");
+const isES = rawPath.startsWith("/en") ? false : true;
+const labels = isES ? nav.es : nav.en;
+const switchTo = isES
+	? "/en" + (rawPath === "/" ? "" : rawPath)
+	: rawPath.replace(/^\/en/, "") || "/";
+---
+
+<nav class="nav">
+    <a class="brand" href={makeHref(isES ? "/" : "/en")}>{labels.brand}</a>
+    <div class="spacer"></div>
+    <a href={makeHref(isES ? "/" : "/en")}>{labels.home}</a>
+    <a href={makeHref(isES ? "/now" : "/en/now")}>{labels.now}</a>
+    <a href={makeHref(isES ? "/services" : "/en/services")}>{labels.services}</a>
+    <a href={makeHref(isES ? "/work" : "/en/work")}>{labels.projects}</a>
+    <a href={makeHref(isES ? "/#contacto" : "/en#contact")}>{labels.talk}</a>
+    <a
+        href={isES ? "https://www.linkedin.com/in/norihelysramos/" : "https://www.linkedin.com/in/norihelysramos/"}
+        target="_blank"
+        rel="noopener noreferrer"
+                >{labels.linkedin}</a
+    >
+    <a class="lang" href={makeHref(switchTo)}>{labels.lang}</a>
+
+    <button
+        id="nav-toggle"
+        class="menu"
+        aria-label="Menu"
+        aria-expanded="false"
+        type="button"
+    >
+        <span class="menu-icon">≡</span>
+    </button>
+</nav>
+
+<style>
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 12px 0;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    .brand {
+        font-weight: 700;
+        letter-spacing: 0.3px;
+    }
+    .spacer {
+        flex: 1;
+    }
+    .lang {
+        padding: 5px 12px;
+        border-radius: 999px;
+        border: none;
+        background: var(--primary);
+        color: #fff;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .lang:hover {
+        filter: brightness(0.97);
+    }
+    .lang:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px color-mix(in oklab, var(--primary) 35%, white);
+    }
+    .contact {
+        margin-left: 4px;
+    }
+    .menu {
+        display: none;
+        background: transparent;
+        border: none;
+        color: var(--ink);
+        padding: 8px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-icon {
+        font-size: 1.8rem;
+        line-height: 1;
+    }
+    @media (max-width: 720px) {
+        .nav {
+            flex-wrap: wrap; /* Allow items to wrap */
+        }
+        .nav a:not(.brand):not(.lang) {
+            display: none;
+        }
+        .menu {
+            display: inline-flex;
+            margin-left: 8px;
+        }
+        
+        /* Mobile menu open state */
+        html.nav-open .nav a:not(.brand):not(.lang) {
+            display: flex; /* Override display:none */
+            width: 100%;   /* Force full width */
+            order: 99;     /* Move to bottom */
+            justify-content: center;
+            padding: 12px;
+            border-top: 1px solid rgba(0,0,0,0.05); /* Subtle separator */
+        }
+        
+        /* Ensure spacer doesn't break layout when open */
+        html.nav-open .nav .spacer {
+            display: flex; /* Keep it taking space on top row */
+        }
+    }
+</style>
+
+<script>
+    // Toggle nav-open class and update aria-expanded for accessibility
+    (function () {
+        const btn = document.getElementById('nav-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+            const opened = document.documentElement.classList.toggle('nav-open');
+            btn.setAttribute('aria-expanded', opened ? 'true' : 'false');
+        });
+    })();
+</script>

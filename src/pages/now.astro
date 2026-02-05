@@ -1,0 +1,46 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import nowData from "../data/now.json";
+const t = nowData.es;
+---
+
+<Layout title={`Now — Norihelys`} description="Qué hago ahora mismo" lang="es">
+    <Fragment slot="header"><Nav /></Fragment>
+    <section class="stack">
+        <h1>{t.title}</h1>
+        {t.entries.map((entry: any) => (
+            <div class="card now-block">
+                <div class="now-date">{entry.date}</div>
+                <div class="now-text">
+                    {entry.paragraphs.map((p: string) => (<p>{p}</p>))}
+                </div>
+            </div>
+        ))}
+        <p class="now-about">
+            <a href={t.about.url} target="_blank" rel="noopener">{t.about.label}</a>
+            — {t.about.text}
+        </p>
+    </section>
+    <Fragment slot="footer">
+        Última actualización: {new Date().toLocaleDateString("es-ES")}
+    </Fragment>
+</Layout>
+
+<style>
+    .stack { display:grid; gap:16px; padding:32px 24px 24px 24px; max-width:720px; margin:0 auto; }
+    .now-block { padding:18px 20px; display:flex; flex-direction:column; gap:8px; }
+    .now-date {
+        font-size: 0.95em;
+        color: var(--stone);
+        font-weight: 600;
+        margin-bottom: 2px;
+    }
+    .now-text {
+        font-size: 1.08em;
+    }
+    .now-about {
+        font-size: 0.95em;
+        color: var(--stone);
+    }
+</style>

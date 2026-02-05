@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import services from "../data/services.json";
+const t = services.es;
+---
+
+<Layout title="Servicios — Norihelys" description="Servicios relacionados con audio, docencia y bienestar." lang="es">
+    <Fragment slot="header"><Nav /></Fragment>
+
+    <section class="services-section section container--medium">
+        <h1>{t.title}</h1>
+        <div class="services-grid">
+            {t.sections.map((sec) => (
+                <article class="card service-card">
+                    <h2>{sec.title}</h2>
+                    <div class="service-body">
+                        <ul>
+                            {sec.items.map((it) => (
+                                <li>{it}</li>
+                            ))}
+                        </ul>
+                    </div>
+                </article>
+            ))}
+        </div>
+    </section>
+    <section class="section container--narrow text-center">
+        <p class="lead cta-line">{t.cta}</p>
+    </section>
+</Layout>
+
+<style>
+    .services-section { max-width: 900px; margin:0 auto; padding:32px 0 24px 0; text-align:left; }
+    .services-section h1 { margin-bottom:8px; }
+    .intro-copy { max-width:720px; margin:0 0 24px 0; }
+    .services-grid { display:grid; gap:20px; grid-template-columns:1fr; }
+    .service-card { padding:18px 20px 20px 20px; overflow:hidden; border:1px solid color-mix(in oklab, var(--sage) 55%, white); background:var(--card); box-shadow:var(--shadow); border-radius:var(--radius); display:flex; flex-direction:column; gap:8px; }
+    .service-card h2 { margin:0 0 4px 0; font-size:1.15rem; }
+    .service-body { padding:0; }
+    .service-body ul { padding-left:1.2rem; text-align:left; }
+    @media (min-width:800px){ .services-grid { grid-template-columns:repeat(3, minmax(0,1fr)); } }
+</style>
