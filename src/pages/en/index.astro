@@ -149,9 +149,9 @@ const t = home.en;
                 import { initContactForm } from "../../utils/contact";
                 
                 initContactForm({
-                    publicKey: 'z2ljYa2zn5-z0KDnm',
-                    serviceId: 'service_tazw81q',
-                    templateId: 'template_6m8c8w7',
+                    publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY,
+                    serviceId: import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+                    templateId: import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
                     successUrl: '/nori/en/thank-you'
                 });
             </script>
